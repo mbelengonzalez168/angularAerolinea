@@ -1,0 +1,37 @@
+<h1>Próximas salidas</h1>
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Tour</th>
+            <th>Ciudades</th>
+            <th>Precio</th>
+            <th>Lugares disponibles</th>
+            <th>Pasajeros</th>
+            <th>Reservar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let article of articles" [ngClass]="{'clearance' : article.clearance}">
+            <td><img width="90" class="img-thumbnail" [src]="article.image" [alt]="article.name"></td>
+            <td>{{article.name}}</td>
+            <td>{{article.category}}</td>
+            <td>{{article.price | currency}}</td>
+            <td>
+                <ng-container *ngIf="stockDisponible(article) > 0; else todoReservado">
+                    <span *ngIf="stockDisponible(article) < 10" class="badge text-bg-danger">Últimos {{ stockDisponible(article) }} lugares</span>
+                    <span *ngIf="stockDisponible(article) >= 10">{{ stockDisponible(article) }} lugares disponibles</span>
+                </ng-container>
+                <ng-template #todoReservado>
+                    <span class="badge text-bg-warning">Todo reservado</span>
+                </ng-template>
+            </td>
+            <td>
+                <app-input-integer [(quantity)]="article.quantity" [max]="stockDisponible(article)" *ngIf="stockDisponible(article) > 0" (maxReached)="maxReached($event)"></app-input-integer>
+            </td>
+            <td>
+                <button class="btn btn-secondary btn-sm" (click)="addToCart(article)" *ngIf="stockDisponible(article) > 0">Reservar</button>
+            </td>            
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,107 @@
+/* Estilo para el encabezado */
+h1 {
+    color: #577da7;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Estilo para las filas con descuento */
+.clearance {
+    border: 2px solid #28a745;
+    background: #d4edda;
+}
+
+/* Estilo para las celdas */
+td {
+    vertical-align: middle;
+    padding: 0.75rem;
+}
+
+/* Estilo para las imágenes */
+img.img-thumbnail {
+    border-radius: 0.5rem;
+}
+
+/* Estilo para la tabla */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table thead th {
+    background-color: #577da7;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+}
+
+.table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table tbody td {
+    border-top: 1px solid #dee2e6;
+}
+
+/* Estilo para los badges */
+.badge {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Estilo para el badge de advertencia */
+.badge.text-bg-warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+/* Estilo para el badge de peligro */
+.badge.text-bg-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Estilo para los botones */
+.btn {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+/* Estilo para los botones de reserva */
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Estilo para el pie de página */
+footer {
+    height: 60px;
+    line-height: 60px;
+    background-color: #577da7;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}

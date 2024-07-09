@@ -1,0 +1,8 @@
+<h1>Estas reservando</h1>
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center" 
+        *ngFor="let article of cartList$ | async "> 
+        {{article.name}}: {{article.quantity}}
+        <button class="btn btn-primary" (click)="delete(article)">Quitar</button>
+    </li>
+</ul>

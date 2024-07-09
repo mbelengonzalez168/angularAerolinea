@@ -1,0 +1,19 @@
+.input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-group .btn {
+    min-width: 40px;
+  }
+  
+  .input-group input {
+    text-align: center;
+    max-width: 80px;
+    border-radius: 0;
+  }
+  .custom-input {
+    width: 100px; /* Ajusta el ancho según sea necesario */
+  }
+  
+  
